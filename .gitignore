@@ -1,0 +1,43 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# OCR/Temporary files
+*_raw.txt
+*-new.tex
+*-updated.*
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Large PDF files (optional - comment out if you want to track them)
+# *.pdf
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
