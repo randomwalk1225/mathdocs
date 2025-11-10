@@ -1,6 +1,5 @@
 # TMUA Chapter 1 - Quiz 3: Statistics Supplements S01
 
-**Source:** Xie Tao TMUA Workbook 2024 (5th Edition)
 **Time Allowed:** 90 minutes
 **Number of Questions:** 15
 **Difficulty:** ★★★★

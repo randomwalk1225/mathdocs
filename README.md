@@ -142,7 +142,6 @@ xelatex -interaction=nonstopmode TMUA-CH1-Quiz3.tex
 
 ## 라이선스
 
-원본 TMUA Workbook은 Xie Tao의 저작물입니다 (2024 5th Edition).
 이 프로젝트는 개인 학습 목적으로만 사용되어야 합니다.
 
 ## 문의
@@ -151,5 +150,4 @@ xelatex -interaction=nonstopmode TMUA-CH1-Quiz3.tex
 
 ---
 
-**Source:** Xie Tao TMUA Workbook 2024 (5th Edition)
 **Last Updated:** 2025-01-10

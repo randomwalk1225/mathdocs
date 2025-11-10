@@ -1,6 +1,5 @@
 # TMUA Chapter 1 - Quiz 2: Statistics Practices P01
 
-**Source:** Xie Tao TMUA Workbook 2024 (5th Edition)
 **Time Allowed:** 40 minutes
 **Number of Questions:** 15
 **Difficulty:** ★★★

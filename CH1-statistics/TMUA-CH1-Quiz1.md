@@ -1,6 +1,5 @@
 # TMUA Chapter 1 - Quiz 1: Statistics Exercises E01
 
-**Source:** Xie Tao TMUA Workbook 2024 (5th Edition)
 **Time Allowed:** No limit
 **Number of Questions:** 23
 **Difficulty:** ★★★☆
