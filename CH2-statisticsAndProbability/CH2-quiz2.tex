@@ -1,0 +1,366 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{booktabs}
+
+\geometry{margin=2.5cm}
+
+% Font settings for XeLaTeX
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+
+% Title formatting
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+% Custom command for answer choices
+\newcommand{\choice}[1]{{\upshape (#1)}}
+
+\title{\textbf{TMUA Chapter 2 - Quiz 2:\\Counting and Probabilities Practices P02}}
+\author{Xie Tao TMUA Workbook 2024 (5th Edition)}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\noindent\textbf{Time Allowed:} 60 minutes\\
+\textbf{Number of Questions:} 20\\
+\textbf{Difficulty:} $\star\star\star$
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\section*{Practice Questions}
+
+\subsection*{Q1}
+An entrance candidate is dealt three cards from a pack of fifty-two playing cards. To one significant figure the probability that he receives exactly one king is:\\
+[There are four kings in a pack of playing cards.]
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item 0.003
+\item 0.01
+\item 0.2
+\item 0.05
+\end{enumerate}
+
+\subsection*{Q2}
+A pack of cards consists of 52 different cards. A malicious dealer changes one of the cards for a second copy of another card in the pack and he then deals the cards to four players, giving thirteen to each. The probability that one player has two identical cards is
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item $\frac{3}{13}$
+\item $\frac{12}{51}$
+\item $\frac{1}{4}$
+\item $\frac{13}{51}$
+\end{enumerate}
+
+\subsection*{Q3}
+A child is presented with the following lettered titles: M A M M A L. The number of different ``words'' he can make using all six tiles is
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item 6
+\item 30
+\item 60
+\item 120
+\end{enumerate}
+
+\subsection*{Q4}
+Aris, Boris, Clarice and Doris have to decide who will do the washing up. They decide to throw a fair 6-sided die: if it lands showing a 5 or 6, Aris will wash up; otherwise they throw again. The second time, if the result is a 5 or 6, Boris will wash up; otherwise they throw one last time. The final time, if the result is a 5 or 6, Clarice washes up, and otherwise it's Doris. (Of course, this is not a fair procedure!) Of the four, who is second most likely to do the washing up?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item Aris
+\item Boris
+\item Clarice
+\item Doris
+\end{enumerate}
+
+\subsection*{Q5}
+Two players take turns to throw a fair six-sided die until one of them scores a six. What is the probability that the first player to throw the die is the first to score a six?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item $\frac{5}{9}$
+\item $\frac{3}{5}$
+\item $\frac{6}{11}$
+\item $\frac{7}{12}$
+\end{enumerate}
+
+\subsection*{Q6}
+You go into a supermarket to buy two packets of biscuits, which may or may not be of the same variety. The supermarket has 20 different varieties of biscuits and at least two packets of each variety. In how many ways can you choose your two packets?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item 400
+\item 210
+\item 200
+\item 190
+\end{enumerate}
+
+\subsection*{Q7}
+Two different faces of a cube are chosen at random. What is the chance of them being opposite one another?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item $\frac{1}{3}$
+\item $\frac{1}{4}$
+\item $\frac{1}{5}$
+\item $\frac{1}{6}$
+\end{enumerate}
+
+\subsection*{Q8}
+60\% of a sports club's members are women and the remainder are men.
+
+This sports club offers the opportunity to play tennis or cricket. Every member plays exactly one of the two sports.
+
+$\frac{2}{5}$ of the male members of the club play cricket; $\frac{2}{3}$ of the cricketing members of the club are women.
+
+What is the probability that a member of the club, chosen at random, is a woman who plays tennis?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item $\frac{1}{5}$
+\item $\frac{7}{25}$
+\item $\frac{1}{3}$
+\item $\frac{11}{25}$
+\item $\frac{3}{5}$
+\end{enumerate}
+
+\subsection*{Q9}
+A bag contains $n$ red balls, $n$ yellow balls, and $n$ blue balls.
+
+One ball is selected at random and not replaced.
+
+A second ball is then selected at random and not replaced.
+
+Each ball is equally likely to be chosen.
+
+The probability that the two balls are not the same colour is
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item $\frac{n - 1}{3n - 1}$
+\item $\frac{2n - 2}{3n - 1}$
+\item $\frac{2n}{3n - 1}$
+\item $\frac{(n - 1)^3}{27(3n - 1)^3}$
+\item $\frac{3(n - 1)}{3n - 1}$
+\item $\frac{n^3}{27(3n - 1)^3}$
+\end{enumerate}
+
+\subsection*{Q10}
+Five runners competed in a race: Fred, George, Hermione, Lavender, and Ron.
+
+\begin{itemize}
+\item Fred beat George.
+\item Hermione beat Lavender.
+\item Lavender beat George.
+\item Ron beat George.
+\end{itemize}
+
+Assuming there were no ties, how many possible finishing orders could there have been, given only this information?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item 1
+\item 6
+\item 12
+\item 18
+\item 24
+\item 120
+\end{enumerate}
+
+\subsection*{Q11}
+A group of five numbers are such that:
+\begin{itemize}
+\item their mean is 0
+\item their range is 20
+\end{itemize}
+
+What is the largest possible median of the five numbers?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item 0
+\item 4
+\item $4\frac{1}{2}$
+\item $6\frac{1}{2}$
+\item 8
+\item 20
+\end{enumerate}
+
+\subsection*{Q12}
+With school lunch, students can select tomato sauce, or mayonnaise, or both, or neither.
+
+\begin{itemize}
+\item $n$ students selected both.
+\item $3n + 1$ students selected tomato sauce.
+\item $3n - 1$ students selected only mayonnaise.
+\item There were $7n + 5$ students in the group.
+\end{itemize}
+
+The probability of a student, chosen at random, selecting only mayonnaise is $\frac{1}{3}$.
+
+By finding $n$, what is the probability of a student, chosen at random, selecting only tomato sauce?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item $\frac{3}{11}$
+\item $\frac{7}{26}$
+\item $\frac{13}{33}$
+\item $\frac{3}{8}$
+\item $\frac{7}{13}$
+\end{enumerate}
+
+\subsection*{Q13}
+Box $A$ contains exactly 10 balls, of which 6 are red and 4 are blue.
+
+Box $B$ contains exactly 15 balls, of which 3 are red and 12 are blue.
+
+All the balls are identical in every respect, apart from colour.
+
+One of the two boxes is chosen at random by tossing two fair coins, as follows:
+
+``If both coins show heads, box $A$ is selected. Otherwise box $B$ is selected.''
+
+One ball is then randomly taken from the selected box.
+
+What is the probability that a red ball is taken?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item $\frac{9}{400}$
+\item $\frac{3}{25}$
+\item $\frac{3}{10}$
+\item $\frac{2}{5}$
+\item $\frac{1}{2}$
+\item $\frac{4}{5}$
+\item $\frac{323}{400}$
+\end{enumerate}
+
+\subsection*{Q14}
+A fair spinner has eight equal sections.
+
+Each section has one number written on it, as shown.
+
+The spinner is spun twice, and the two numbers scored are added.
+
+What is the probability that the sum of the two numbers is 5?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item $\frac{1}{8}$
+\item $\frac{5}{8}$
+\item $\frac{1}{16}$
+\item $\frac{3}{16}$
+\item $\frac{25}{64}$
+\item $\frac{55}{64}$
+\end{enumerate}
+
+\subsection*{Q15}
+Two identical fair six-sided dice each have their faces numbered from 1 to 6, with one number on each face.
+
+Both dice are thrown, and the number on each of the dice is recorded.
+
+They are then both thrown again, and the number on each of the dice is recorded.
+
+What is the probability that at least one of the four recorded numbers is even?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item $\frac{1}{4}$
+\item $\frac{1}{2}$
+\item $\frac{9}{16}$
+\item $\frac{3}{4}$
+\item $\frac{15}{16}$
+\end{enumerate}
+
+\subsection*{Q16}
+Two fair six-sided dice are identical except for their colour.
+
+Each of the dice has its faces numbered from 1 to 6, with one number on each face.
+
+One of the dice is red and the other is blue.
+
+The two dice are rolled.
+
+The number shown on the red dice is divided by the number shown on the blue dice to give the score.
+
+What is the probability of a score of 0.5?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item 0
+\item $\frac{1}{36}$
+\item $\frac{1}{18}$
+\item $\frac{1}{12}$
+\item $\frac{1}{6}$
+\end{enumerate}
+
+\subsection*{Q17}
+75 pupils in a year group study German or French, or both, or neither.
+
+\begin{itemize}
+\item 10 pupils study both languages.
+\item The ratio of those who study both to those that study neither is 5:3 respectively.
+\item 42 pupils study German.
+\item 2 pupils are chosen and each pupil is equally likely to be chosen.
+\end{itemize}
+
+What is the probability that one pupil studies French, and the other pupil studies only German?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item $\frac{16}{75}$
+\item $\frac{128}{555}$
+\item $\frac{7}{25}$
+\item $\frac{32}{75}$
+\item $\frac{256}{555}$
+\item $\frac{14}{25}$
+\end{enumerate}
+
+\subsection*{Q18}
+During summer activities week 120 students each chose one activity from swimming, archery, and tennis.
+
+\begin{itemize}
+\item 46 of the students were girls.
+\item 36 of the students chose tennis, and $\frac{2}{3}$ of these were boys.
+\item 25 girls chose swimming.
+\item 27 students chose archery.
+\end{itemize}
+
+A boy is picked at random. What is the probability that he chose swimming?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item $\frac{3}{20}$
+\item $\frac{9}{37}$
+\item $\frac{4}{15}$
+\item $\frac{16}{37}$
+\item $\frac{32}{57}$
+\end{enumerate}
+
+\subsection*{Q19}
+A pet shop has 4 female rabbits and $x$ male rabbits for sale.
+
+A customer buys 2 of the rabbits, chosen at random, and each rabbit is equally likely to be chosen.
+
+The probability that both the chosen rabbits are male is $\frac{1}{3}$.
+
+What is the value of $x$?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item 2
+\item 4
+\item 6
+\item 8
+\item 9
+\item 11
+\item 12
+\end{enumerate}
+
+\subsection*{Q20}
+There are two red balls and two blue balls in a bag.
+
+Two balls are removed at random without replacement.
+
+Given that at least one of them is red, what is the probability that one of them is blue?
+
+\begin{enumerate}[label=\choice{\Alph*}, leftmargin=2cm]
+\item $\frac{1}{2}$
+\item $\frac{2}{3}$
+\item $\frac{4}{5}$
+\item $\frac{5}{6}$
+\item 1
+\end{enumerate}
+
+\end{document}

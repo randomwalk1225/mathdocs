@@ -31,9 +31,9 @@ def extract_text_from_pdf(pdf_path):
 
 # 처리할 PDF 파일 목록
 pdf_files = [
-    "TMUA-CH1-Quiz1.pdf",
-    "TMUA-CH1-Quiz2.pdf",
-    "TMUA-CH1-Quiz3.pdf"
+    "CH2/CH2-quiz1.pdf",
+    "CH2/CH2-quiz2.pdf",
+    "CH2/CH2-quiz3.pdf"
 ]
 
 # 각 PDF 파일 처리
@@ -45,6 +45,10 @@ for pdf_file in pdf_files:
 
     # 임시 텍스트 파일로 저장 (AI 교정 전)
     txt_filename = pdf_file.replace(".pdf", "_raw.txt")
+    # 출력 디렉토리 생성
+    output_dir = os.path.dirname(txt_filename)
+    if output_dir and not os.path.exists(output_dir):
+        os.makedirs(output_dir)
     with open(txt_filename, "w", encoding="utf-8") as f:
         f.write(text)
 
