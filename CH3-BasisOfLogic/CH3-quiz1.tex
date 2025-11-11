@@ -1,0 +1,424 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+
+\geometry{margin=2.5cm}
+
+% Font settings for XeLaTeX
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+
+% Title formatting
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+% Custom command for answer choices
+\newcommand{\choice}[1]{{\upshape (#1)}}
+
+\title{\textbf{TMUA Chapter 3 - Quiz 1:\\Basis of Logic Exercises E03}}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\noindent\textbf{Time Allowed:} No limit\\
+\textbf{Number of Questions:} 26\\
+\textbf{Difficulty:} $\star\star\star$
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\section*{Pre-Quiz Questions}
+
+\subsection*{Quiz Pre-1}
+What is the greatest number of the following five statements about numbers $a$, $b$ which can be true at the same time?
+
+$a < \frac{1}{b}$ \quad $a^2 > b^2$ \quad $a < b$ \quad $a < 0$ \quad $b < 0$
+
+\begin{itemize}[label=\choice{\Alph*}]
+\item 1
+\item 2
+\item 3
+\item 4
+\item 5
+\end{itemize}
+
+\subsection*{Quiz Pre-2}
+The Queen of Hearts had some tarts, but they were eaten. Precisely one of the following statements about the tarts and the Knaves of Clubs, Diamonds and Spades is true. Which one?
+
+\begin{itemize}[label=\choice{\Alph*}]
+\item None of the three Knaves ate any tarts.
+\item The Knave of Clubs ate some tarts.
+\item Only one of the three Knaves ate any tarts.
+\item At least one of the Knave of Diamonds and the Knave of Spades ate no tarts.
+\item More than one of the three Knaves ate some tarts.
+\end{itemize}
+
+\subsection*{Quiz Pre-3}
+A magical island is inhabited entirely by knights (who always tell the truth) and knaves (who always tell lies). One day 2014 of the islanders were standing in a long queue. Each person in the queue said, ``There are more knaves behind me than knights in front of me''.
+
+How many knights were in the queue?
+
+\begin{itemize}[label=\choice{\Alph*}]
+\item 1
+\item 504
+\item 1007
+\item 1008
+\item 2014
+\end{itemize}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\section*{Exercise Questions}
+
+\subsection*{Ex. 1}
+Draw up the truth table for (A or B) and (not C).
+
+\subsection*{Ex. 2}
+Draw up the truth tables for
+\begin{itemize}
+\item[(i)] not (A and B).
+\item[(ii)] (not A) or (not B).
+\end{itemize}
+
+\subsection*{Ex. 3}
+Draw up the truth tables for
+\begin{itemize}
+\item[(i)] not (A or B).
+\item[(ii)] (not A) and (not B).
+\end{itemize}
+
+Then show the relationships by means of Venn diagrams.
+
+\subsection*{Ex. 4}
+Draw up a truth table of not A or B? Comparing with the truth table above, what conclusion can you draw from this truth table?
+
+\subsection*{Ex. 5}
+There are four double-sided cards, and each has a letter on one side and a number on the other. The faces that are up are showing ``6'', ``E'', ``Q'' and ``7''. They are supposed to obey the following rule: ``If there is a vowel on one side, then the card has an even number on the other side.''
+
+Question: To see that the rule has been kept, which card(s) must be turned over and checked?
+
+\subsection*{Ex. 6}
+I make the following statements:
+\begin{itemize}
+\item Statement P: if a pig has horns, then it can breathe fire.
+\item Statement Q: if a pig can breathe fire, then it has wings.
+\item Statement R: if a pig has wings, then it has horns.
+\end{itemize}
+
+Each statement is either true or false, but I don't know which.
+
+I then see a pig with wings breathing fire. It has no horns.
+
+Which statements, if any, can I now conclude are definitely true or definitely false?
+
+\begin{itemize}[label=\choice{\Alph*}]
+\item none of them
+\item P only
+\item Q only
+\item R only
+\item P and Q only
+\item P and R only
+\item Q and R only
+\item P, Q, and R
+\end{itemize}
+
+\subsection*{Ex. 7}
+Judge whether the following statements are true or false.
+\begin{itemize}
+\item[(i)] $ab$ is even if both $a$ and $b$ are even.
+\item[(ii)] $ab$ is even only if both $a$ and $b$ are even.
+\item[(iii)] $a = b$ if $a^2 = b^2$.
+\item[(iv)] $a = b$ only if $a^2 = b^2$.
+\item[(v)] a triangle is equilateral if it has three equal sides.
+\item[(vi)] a triangle is equilateral only if it has three equal sides.
+\end{itemize}
+
+\subsection*{Ex. 8}
+State whether the following are true or false:
+\begin{itemize}
+\item[(i)] an even number is prime iff it is 2.
+\item[(ii)] an odd number is prime iff it is 3.
+\item[(iii)] $x = 3$ iff $x^2 - 9 = 0$.
+\item[(iv)] a triangle with sides of lengths $a$, $b$ and $c$ is right-angled iff $a^2 + b^2 = c^2$.
+\item[(v)] a triangle is scalene iff no two angles are the same.
+\end{itemize}
+
+For those parts where the statement is false, re-write the statement using ``if'' or ``only if'' to make it true.
+
+\subsection*{Ex. 9}
+A curve has the equation $y = ax^3 + bx^2 + c$. The curve has a maximum stationary point at $x = 0$ and a minimum stationary point in the 4th quadrant (that is, the region where $x > 0$ and $y < 0$).
+
+Which of the following set of conditions is sufficient to ensure this?
+
+\begin{itemize}[label=\choice{\Alph*}]
+\item $a < 0, b < 0, c < 0$.
+\item $a < 0, b < 0, c > 0$.
+\item $a < 0, b > 0, c < 0$.
+\item $a < 0, b > 0, c > 0$.
+\item $a > 0, b < 0, c < 0$.
+\item $a > 0, b < 0, c > 0$.
+\item $a > 0, b > 0, c < 0$.
+\item $a > 0, b > 0, c > 0$.
+\end{itemize}
+
+\subsection*{Ex. 10}
+Consider the following statement about real numbers $a$ and $b$:
+$$a^2 > b^2 \quad (*)$$
+
+Which of the following is true?
+
+\begin{itemize}[label=\choice{\Alph*}]
+\item The condition $a > b$ is necessary but not sufficient for (*) to be true.
+\item The condition $a > b$ is sufficient but not necessary for (*) to be true.
+\item The condition $a > b$ is necessary and sufficient for (*) to be true.
+\item The condition $a > b$ is not necessary and not sufficient for (*) to be true.
+\end{itemize}
+
+\subsection*{Ex. 11}
+In this question $x$ and $y$ are non-zero real numbers.
+
+Which one of the following is sufficient to conclude that $x < y$?
+
+\begin{itemize}[label=\choice{\Alph*}]
+\item $x^4 < y^4$
+\item $y^4 < x^4$
+\item $x^{-1} < y^{-1}$
+\item $y^{-1} < x^{-1}$
+\item $x^{3/5} < y^{3/5}$
+\item $y^{3/5} < x^{3/5}$
+\end{itemize}
+
+\subsection*{Ex. 12}
+There are three boxes A, B, and C with two boxes containing marbles and one containing candy. Each box has a note on it.
+
+\begin{itemize}
+\item A: This box does not contain candy.
+\item B: This box contains candy.
+\item C: Box B contains marbles.
+\end{itemize}
+
+Only one of the above statements is true, and the others are false. Which box contains candy?
+
+\subsection*{Ex. 13}
+Portia has three boxes made from gold, silver and lead. She has placed a prize in one of these boxes and challenges a friend, Bassanio, to find the prize.
+
+She explains that on each box there is a message which may be true or false. On the basis of these messages Bassanio should be able to choose the box with the prize in.
+
+\textbf{(i)} Initially suppose that there are only two boxes, gold and silver, one of which contains the prize. The messages read:
+\begin{itemize}
+\item Gold: The prize is not in here.
+\item Silver: Exactly one of these messages is true.
+\end{itemize}
+
+Which box contains the prize? Explain your answer.
+
+\textbf{(ii)} Now suppose that there are all three boxes and that Portia has left the following messages on them:
+\begin{itemize}
+\item Gold: The prize is in here.
+\item Silver: The prize is in here.
+\item Lead: At least two of these messages are false.
+\end{itemize}
+
+Which box should Bassanio choose? Explain your answer.
+
+\textbf{(iii)} In this version of the challenge, Portia puts a dagger into one of the boxes. Bassanio must choose a box that does not contain the dagger. The messages on the boxes now read as follows:
+\begin{itemize}
+\item Gold: The dagger is in this box.
+\item Silver: The dagger is not in this box.
+\item Lead: At most one of these messages is true.
+\end{itemize}
+
+Which box should Bassanio choose? Explain your answer.
+
+\subsection*{Ex. 14}
+Five logicians each make a statement, as follows:
+
+\begin{itemize}
+\item Mr. P: Of these five statements, an odd number are true.
+\item Ms. Q: Both statements made by women are true.
+\item Mr. R: My first name is Robert and Mr. P's statement is true.
+\item Ms. S: Exactly one statement made by a man is true.
+\item Mr. T: Neither statement made by a woman is true.
+\end{itemize}
+
+How many of the five statements can be simultaneously true?
+
+\begin{itemize}[label=\choice{\Alph*}]
+\item none
+\item 1 only
+\item 2 only
+\item 3 only
+\item 4 only
+\item none or 1 only
+\item 1 or 2 only
+\item 2 or 3 only
+\end{itemize}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\section*{Quiz Questions}
+
+\subsection*{Quiz 1}
+$a$, $b$ and $c$ are real numbers with $a < b < c < 0$.
+
+Which of the following statements must be true?
+
+\begin{itemize}
+\item[I] $ac < ab < a^2$
+\item[II] $b(c + a) > 0$
+\item[III] $\frac{c}{b} > \frac{a}{b}$
+\end{itemize}
+
+\begin{itemize}[label=\choice{\Alph*}]
+\item none of them
+\item I only
+\item II only
+\item III only
+\item I and II only
+\item I and III only
+\item II and III only
+\item I, II and III
+\end{itemize}
+
+\subsection*{Quiz 2}
+A set of five cards each have a letter printed on their front and a number printed on their back, as follows:
+
+[Card A: A/5, Card B: E/6, Card C: I/7, Card D: O/8, Card E: U/9]
+
+Which one of the five cards (A, B, C, D or E) provides a counterexample to the following statement?
+
+``Every card that has a vowel on its front has an even number on its back.''
+
+\subsection*{Quiz 3}
+Three friends make the following statements.
+
+\begin{itemize}
+\item Ben says, ``Exactly one of Dan and Cam is telling the truth.''
+\item Dan says, ``Exactly one of Ben and Cam is telling the truth.''
+\item Cam says, ``Neither Ben nor Dan is telling the truth.''
+\end{itemize}
+
+Which of the three friends is lying?
+
+\begin{itemize}[label=\choice{\Alph*}]
+\item Just Ben
+\item Just Dan
+\item Just Cam
+\item Each of Ben and Cam
+\item Each of Ben, Cam and Dan
+\end{itemize}
+
+\subsection*{Quiz 4}
+Some students tried to solve a problem in the Kangaroo competition. The number of boys who solved the problem correctly was equal to the number of girls who did not solve the problem correctly.
+
+Which of the following statements is true?
+
+\begin{itemize}[label=\choice{\Alph*}]
+\item The number of girls is more than the number of students who solved the problem correctly.
+\item The number of girls is less than the number of students who solved the problem correctly.
+\item The number of girls is equal to the number of students who solved the problem correctly.
+\item The situation is impossible.
+\item We need more information to decide on options (A), (B) or (C).
+\end{itemize}
+
+\subsection*{Quiz 5}
+There are some squares and triangles on the table. Some of them are blue and the rest are red. Some of these shapes are large and the rest are small. We know that:
+
+\begin{enumerate}
+\item If the shape is large, it's a square;
+\item If the shape is blue, it's a triangle.
+\end{enumerate}
+
+Which of the statements (A)–(E) must be true?
+
+\begin{itemize}[label=\choice{\Alph*}]
+\item All red figures are squares.
+\item All squares are large.
+\item All small figures are blue.
+\item All triangles are blue.
+\item All blue figures are small.
+\end{itemize}
+
+\subsection*{Quiz 6}
+Every other day Renate tells the truth for the whole day. Otherwise she lies for the whole day. Today she made exactly four of the following statements.
+
+Which statement could she not have made today?
+
+\begin{itemize}[label=\choice{\Alph*}]
+\item My name is Renate.
+\item I have a prime number of friends.
+\item I have the same number of girls who are friends as boys.
+\item Three of my friends are older than me.
+\item I always tell the truth.
+\end{itemize}
+
+\subsection*{Quiz 7}
+Lali and Gregor play a game with five coins, each with Heads on one side and Tails on the other. The coins are placed on a table, with Heads showing. In each round of the game, Lali turns over a coin, and then Gregor turns over a different coin. They play a total of ten rounds.
+
+Which of the following statements is then true?
+
+\begin{itemize}[label=\choice{\Alph*}]
+\item It is impossible for all the coins to show Heads
+\item It is impossible for all the coins to show Tails
+\item It is definite that all the coins show Heads
+\item It is definite that all the coins show Tails
+\item None of the statements (A) to (D) is true
+\end{itemize}
+
+\subsection*{Ex. 15}
+I have two dice whose faces are all painted different colours. I number the faces of one of them 1, 2, 2, 3, 3, 6 and the other 1, 3, 3, 4, 5, 6. I can now throw a total of 3 in two different ways using the two number 2's on the first die once each. Show that there are seven different ways of throwing a total of 6.
+
+I now renumber the dice (again only using integers in the range 1 to 6) with the results shown in the following table:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Total & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \\
+\hline
+Ways & 0 & 2 & 1 & 1 & 4 & 3 & 8 & 6 & 5 & 6 & 0 \\
+\hline
+\end{tabular}
+\end{center}
+
+Find how I have numbered the dice explaining your reasoning.
+
+[You will only get high marks if the examiner can follow your argument.]
+
+\subsection*{Ex. 16}
+A Minister and a Bishop were having a cup of tea. There was a knock at the door, and three bell ringers entered the room. After introductions, the Bishop asked the Minister how old the bell ringers were.
+
+``Well,'' the Minister said, knowing the Bishop had a penchant for numerical puzzles, ``if you multiplied their three ages together, you'd get 2,450. But if you added them, you'd get twice your age.''
+
+``Hmm,'' the Bishop muttered, after several moments' thought. ``I haven't enough information to solve that.''
+
+``It may help, my dear Bishop,'' offered the Minister, ``to know that I am older than anyone else here in the room.''
+
+``Yes, indeed it would,'' replied the Bishop. ``Now I know their ages.''
+
+The question is: How old is the Minister?
+
+You may assume that all ages are integers.
+
+\vspace{2em}
+
+\noindent\hrule
+
+\vspace{1em}
+
+\noindent\textbf{Last Updated:} 2025-01-11
+
+\end{document}
