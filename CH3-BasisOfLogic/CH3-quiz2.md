@@ -249,7 +249,3 @@ The Tour de Clochemerle is not yet as big as the rival Tour de France. This year
 Explain why Eluard must have received 11 points in all and find the scores obtained by Barthes, Camus and Diderot.
 
 Where did Barthes come in the final stage?
-
----
-
-**Last Updated:** 2025-01-11

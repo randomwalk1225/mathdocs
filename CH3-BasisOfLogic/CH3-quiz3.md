@@ -159,7 +159,3 @@ By considering (*x*² + *gx* + *h*)(*x* − *k*), or otherwise, show that *g*² 
 (*g* − *k*)² > 3(*h* − *gk*)
 
 to hold.
-
----
-
-**Last Updated:** 2025-01-11

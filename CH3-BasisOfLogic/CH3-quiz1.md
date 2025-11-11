@@ -317,7 +317,3 @@ A Minister and a Bishop were having a cup of tea. There was a knock at the door,
 The question is: How old is the Minister?
 
 You may assume that all ages are integers.
-
----
-
-**Last Updated:** 2025-01-11
