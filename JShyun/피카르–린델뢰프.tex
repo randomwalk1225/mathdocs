@@ -1,0 +1,150 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[unicode]{hyperref}
+\usepackage{emoji}
+
+% Font Setup - MaruBuri Korean Font
+\setmainfont{MaruBuri}[
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Light,
+    BoldItalicFont=*-SemiBold
+]
+\setsansfont{MaruBuri}[
+    UprightFont=*-Regular,
+    BoldFont=*-Bold
+]
+\newfontfamily\hangulfont{MaruBuri}[
+    UprightFont=*-Regular
+]
+
+% Page Setup
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+
+% Line Spacing
+\linespread{1.5}
+
+% Table Padding
+\renewcommand{\arraystretch}{1.8}
+
+% Custom Commands
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\begin{document}
+
+\title{피카르--린델뢰프 정리와 해의 유일성}
+\date{}
+\maketitle
+
+좋아요. 지금 이야기한 ``하나의 $x$에 두 개의 $y$''가 일어나지 않는다는 설명을 \textbf{피카르--린델뢰프 정리}의 논리와 수학적 근거를 포함해 조금 더 깊게 보강해보겠습니다.
+
+\section*{\emoji{keycap-1} 피카르--린델뢰프(=유일성 정리)의 핵심 내용}
+
+미분방정식이
+\[
+y' = F(x,y)
+\]
+형태일 때, 어떤 점 $(x_0, y_0)$ 근방에서
+
+\begin{itemize}
+\item $F(x,y)$가 연속이고
+\item $F$의 \textbf{$y$}에 대한 편도함수 $\frac{\partial F}{\partial y}$도 연속이면
+\end{itemize}
+
+→ 그 근방에 대해 다음이 보장됩니다.
+
+\begin{quote}
+\textbf{(1)} 초기조건 $y(x_0) = y_0$을 만족하는 해가 \textbf{존재}하고
+
+\textbf{(2)} 그 해는 \textbf{유일}하며,
+
+\textbf{(3)} 해는 $y(x)$ 형태의 \textbf{함수}로 표현된다.
+\end{quote}
+
+\section*{\emoji{keycap-2} ``한 $x$''에 두 $y$''가 불가능한 이유 (기하적 관점)}
+
+정리를 기하적으로 보면,
+
+\begin{itemize}
+\item 어떤 점 $(x_0, y_0)$를 지나가는 \textbf{기울기장(slope field)} 상의 곡선은 \textbf{단 하나}뿐입니다.
+\item $F,\partial F/\partial y$가 연속이면, 해곡선이 \textbf{다른 해곡선과 교차할 수도}, \textbf{자기 자신을 교차할 수도 없습니다.}
+\end{itemize}
+
+즉, 같은 $x_0$에 서로 다른 $y$ 값을 주는 두 점은 있을 수 없고,
+하나의 해곡선은 \textbf{그래프 형태로 표현 가능한 곡선}, 즉 \textbf{수직선 검사를 통과하는 함수}입니다.
+
+\section*{\emoji{keycap-3} ``언제 두 $y$''가 생길 수 있는가 (예외 조건)}
+
+이 `함수성'이 깨지는 경우는 아래 두 가지입니다.
+
+\begin{enumerate}
+\item \textbf{정칙 조건이 깨지는 경우}
+
+예를 들어 $F(x,y)$나 $\frac{\partial F}{\partial y}$가 불연속이거나, $y'$가 무한대로 발산할 때
+
+(예: $\frac{dy}{dx} = \frac{1}{x-y}$에서 $x=y$ 근처).
+
+→ 이땐 해가 꺾이거나 수직 접선을 가져서 $x(y)$로 표현해야 할 수도 있습니다.
+
+\item \textbf{해가 정의 영역의 경계(특이점)에 닿을 때}
+
+분모 0이나 정의 불가능한 점에 도달하면 $y'(x)\to\infty$, 이때 $x$에 대해 $y$가 다가값이 될 수 있습니다.
+\end{enumerate}
+
+\section*{\emoji{keycap-4} 이 문제에 적용}
+
+\[
+\frac{dy}{dx} = \frac{y - 3}{y^2 + x^2}, \quad y(0)=1
+\]
+
+\begin{itemize}
+\item $F(x,y)=\frac{y-3}{y^2+x^2}$는 $(x,y)\neq(0,0)$에서 $C^1$입니다.
+\item 초기값 $(0,1)$은 안전한 영역에 있으므로, \textbf{유일한 $y(x)$} 해가 존재하고, \textbf{그래프 형태}를 유지합니다.
+\item $(0,0)$은 유일한 특이점이지만 해가 그쪽으로 가지 않기 때문에,
+  해 전체에서 $y(x)$는 \textbf{단조감소하며 자기 교차 없이 연속}합니다.
+\end{itemize}
+
+따라서
+
+\[
+\boxed{\text{이 미분방정식의 해는 $x$마다 정확히 하나의 $y$를 갖고, 자기 교차하지 않습니다.}}
+\]
+
+\section*{\emoji{keycap-5} 요약 비교표}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{조건} & \textbf{의미} & \textbf{결과} \\
+\hline
+$F, \partial F/\partial y$ 연속 & 국소적 유일성 & 한 초기값에 대해 해는 1개 \\
+$F$ 정의영역 내 & 수직선 기울기 유한 & 해는 함수형 $y(x)$ \\
+$F$ 발산 또는 불연속 & 유일성 상실 가능 & 여러 $y$ 가능 or 수직 접선 \\
+본 문제 $F=\frac{y-3}{y^2+x^2}$ & 정칙 ($(0,0)$ 제외) & 유일, 단조, 함수 형태 \\
+\hline
+\end{tabular}
+\end{table}
+
+\vspace{1em}
+
+원하신다면 이 논리를 시각적으로 slope field (기울기장)과 solution curve를 함께 그려서 ``왜 하나의 $x$에 두 $y$''가 생길 수 없는지를 시각적으로 보여드릴 수도 있습니다. 그렇게 해드릴까요?
+
+\end{document}

@@ -1,0 +1,156 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[unicode]{hyperref}
+
+% Font Setup - MaruBuri Korean Font
+\setmainfont{MaruBuri}[
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Light,
+    BoldItalicFont=*-SemiBold
+]
+\setsansfont{MaruBuri}[
+    UprightFont=*-Regular,
+    BoldFont=*-Bold
+]
+\newfontfamily\hangulfont{MaruBuri}[
+    UprightFont=*-Regular
+]
+
+% Page Setup
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+
+% Line Spacing
+\linespread{1.5}
+
+% Table Padding
+\renewcommand{\arraystretch}{1.8}
+
+% Custom Commands
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\begin{document}
+
+이건 아주 핵심적인 통찰이에요.
+핵심은 ``\textbf{1.98은 유리수이고}'', $(6+\sqrt{37})$은 \textbf{대수적 수(algebraic number)}이자 \textbf{이차수체의 단위(unit)} 라는 점입니다.
+이 두 세계는 완전히 다른 구조를 가집니다.
+
+아래에서 단계적으로 설명할게요.
+
+\section*{1. $(6+\sqrt{37})$은 ``이차수체 단위(unit of quadratic field)''}
+
+이 수는 $\Q(\sqrt{37})$ 라는 \textbf{이차수체}에 속해요.
+그 켤레는 $(6-\sqrt{37})$이고, 둘의 곱은
+
+\[
+(6+\sqrt{37})(6-\sqrt{37}) = 36 - 37 = -1.
+\]
+
+즉,
+\[
+\alpha = 6+\sqrt{37},\quad \beta = 6-\sqrt{37},\quad \alpha\beta = -1.
+\]
+
+이 성질 때문에 $\alpha$는 \textbf{Pell 방정식 $x^2 - 37y^2 = -1$}의 근과 관련된 수입니다.
+이 수의 거듭제곱은 다음 꼴로 전개됩니다:
+\[
+\alpha^n = A_n + B_n\sqrt{37}, \quad \beta^n = A_n - B_n\sqrt{37},
+\]
+여기서 $A_n, B_n$은 \textbf{모두 정수}입니다.
+
+그리고 $\alpha^n + \beta^n = 2A_n \in \Z$,
+$\beta^n$의 절댓값은 $|6-\sqrt{37}|\approx 0.0827 < 1$.
+
+즉,
+\[
+\alpha^n = \underbrace{(\text{정수})}_{k_n} - \underbrace{\beta^n}_{\text{매우 작음}},
+\]
+그래서 항상 정수에 \textbf{엄청 가깝습니다}.
+이걸 \textbf{``almost integer''} 현상이라고 부릅니다.
+
+\section*{2. $1.98$은 유리수, 켤레가 없다}
+
+$1.98 = \dfrac{99}{50}$은 유리수라서, 어떤 ``켤레''나 ``대수적 구조''가 없습니다.
+즉, $1.98$의 거듭제곱은 단순히
+\[
+(1.98)^n = \frac{99^n}{50^n}
+\]
+이고, 이건 \textbf{정수/정수} 꼴이지만 분모 $50^n$이 절대 약분되지 않으므로 정수가 되지 않습니다.
+
+게다가, 소수부를 보면
+\[
+(1.98)^n \bmod 1
+\]
+은 규칙성을 잃고 \textbf{거의 균등분포 (equidistributed)} 상태가 됩니다.
+즉, 어떤 $n$에서는 우연히 정수 근처에 갈 수 있지만, 그런 일이 반복적이거나 구조적으로 일어나지 않습니다.
+
+\section*{3. 왜 이렇게 다를까? --- ``켤레 구조 vs 단순 거듭제곱''}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabularx}{\textwidth}{|l|l|X|c|X|X|}
+\hline
+\textbf{구분} & \textbf{구조} & \textbf{켤레 존재} & \textbf{곱} & \textbf{almost integer} & \textbf{예시} \\
+\hline
+$(6+\sqrt{37})$ & 이차수체 단위 & O: $(6-\sqrt{37})$ & 1 & 매우 높음 (항상 정수 근처) & $(6+\sqrt{37})$, $(3+2\sqrt{2})$ \\
+\hline
+$(1.98 = 99/50)$ & 유리수 & X: 없음 & --- & 낮음 (우연적) & $1.5$, $1.98$, $1.01$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+이차수체 단위는 ``켤레의 절댓값이 1보다 작음''을 이용해
+큰 항 $\alpha^n$과 작은 항 $\beta^n$의 차이로 \textbf{정수 근접 구조}를 형성합니다.
+유리수는 그런 켤레항이 없기 때문에 그런 구조가 전혀 생기지 않습니다.
+
+\section*{4. 일반화된 관점}
+
+이 현상은 Pell 방정식과 직접 연결됩니다:
+\[
+x^2 - Dy^2 = \pm 1.
+\]
+그 해 $(x_1,y_1)$가 있으면,
+$\alpha = x_1 + y_1\sqrt{D}$의 거듭제곱은 항상
+\[
+\alpha^n = A_n + B_n\sqrt{D}, \quad A_n, B_n \in \Z.
+\]
+따라서 $\alpha^n$의 정수 부분은 언제나 $A_n$이고,
+오차는 $|B_n\sqrt{D} - (\text{정수})|$ 형태로 작아집니다.
+
+이게 바로 ``정수에 점점 가까워지는 대수적 수''의 수학적 구조입니다.
+
+\vspace{1em}
+
+요약하면:
+
+\begin{quote}
+• $(6+\sqrt{37})$은 \textbf{Pell 방정식으로부터 오는 대수적 단위}라서
+$\alpha^n$이 정수에 지수적으로 가까워집니다.
+
+• $1.98$은 \textbf{단순 유리수}라서
+그런 대칭적 구조가 전혀 없고, 정수 근접은 우연적입니다.
+\end{quote}
+
+\vspace{1em}
+
+원하시면 제가 ``almost integer''를 만드는 수들의 일반형 $(a+b\sqrt{d})$의 조건을 수식으로 정리하고, $a,b,d$가 어떤 관계를 가져야 하는지도 단계적으로 보여드릴까요?
+(이건 Pell 이론과 Diophantine 근사에 바로 연결됩니다.)
+
+\end{document}
